@@ -15,37 +15,37 @@ export function PracticalProjects() {
       <CardContent className="space-y-6">
         <div>
           <h3 className="font-semibold text-foreground mb-2">
-            {language === 'en' ? 'SOC Home Lab — Log Analysis & Incident Detection' : 'Home Lab SOC — Análisis de Logs y Detección de Incidentes'}
+            {language === 'en' 
+              ? 'Infrastructure & SOC Home Lab — Administration & Incident Troubleshooting' 
+              : 'Home Lab de Infraestructura & SOC — Administración y Resolución de Incidentes'}
           </h3>
           <p className="text-sm text-foreground leading-relaxed">
             {language === 'en' 
-              ? 'Built and maintained a personal SOC-focused home lab using Linux and Windows systems. Generated security-relevant events such as failed logins, suspicious network connections, and system changes. Analyzed authentication, system, and network logs to identify anomalies, correlate events, and perform initial incident triage following SOC Tier 1 workflows.'
-              : 'Construcción y mantenimiento de un laboratorio SOC personal en entornos Linux y Windows. Generación de eventos de seguridad como inicios de sesión fallidos, conexiones de red sospechosas y modificaciones al sistema. Análisis de logs de red, sistema y autenticación para identificar anomalías, correlacionar eventos y realizar triaje inicial de incidentes siguiendo flujos de trabajo de SOC Nivel 1.'}
+              ? 'Deployment and administration of a virtualized lab environment across Linux and Windows systems focused on infrastructure support and security operations. Configuration of services, user accounts, and policies, combined with hands-on troubleshooting of technical incidents (account lockouts, connectivity issues, anomalous events). Analysis of system and authentication logs (Event Viewer, Syslog) with incident triage following SLA standards.'
+              : 'Despliegue y administración de un entorno de laboratorio virtualizado en Linux y Windows enfocado en soporte de infraestructura y operaciones de seguridad. Configuración de servicios, usuarios y políticas, junto con la resolución práctica de incidencias técnicas (bloqueos de cuentas, fallos de conectividad, eventos anómalos). Análisis de logs de sistema y autenticación (Event Viewer, Syslog) con triaje de incidentes bajo estándares de SLA.'}
           </p>
         </div>
 
         <div>
           <h3 className="font-semibold text-foreground mb-2">
-            {language === 'en' ? 'Network Traffic Analysis & Monitoring' : 'Análisis y Monitoreo de Tráfico de Red'}
+            {language === 'en' ? 'Network Diagnostics, Traffic Analysis & Troubleshooting' : 'Diagnóstico de Redes, Análisis de Tráfico y Troubleshooting'}
           </h3>
           <p className="text-sm text-foreground leading-relaxed">
             {language === 'en' ? (
               <>
-                Captured and analyzed network traffic using tools such as
+                Network diagnostics, traffic capture, and analysis using tools such as
                 <code className="text-cyan-400 mx-1">Wireshark</code>
-                to identify abnormal patterns, unauthorized connections, and
-                potential security incidents. Practiced analysis of TCP/IP traffic,
-                DNS queries, and basic attack indicators from a defensive
-                perspective.
+                for connectivity troubleshooting, protocol inspection (TCP/IP, DNS, DHCP, ARP),
+                and identification of performance bottlenecks or anomalous traffic.
+                Practiced isolating network issues and ensuring operational availability and baseline security.
               </>
             ) : (
               <>
-                Captura y análisis de tráfico de red utilizando herramientas como
+                Diagnóstico, captura y análisis de tráfico de red utilizando herramientas como
                 <code className="text-cyan-400 mx-1">Wireshark</code>
-                para identificar patrones anormales, conexiones no autorizadas y
-                posibles incidentes de seguridad. Práctica en análisis de tráfico TCP/IP,
-                consultas DNS e indicadores básicos de ataque desde una perspectiva
-                defensiva.
+                para resolución de incidencias de conectividad, análisis de protocolos (TCP/IP, DNS, DHCP, ARP)
+                y detección de cuellos de botella o tráfico anómalo.
+                Práctica en aislamiento de fallas de red y evaluación de indicadores de disponibilidad y seguridad operativa.
               </>
             )}
           </p>
@@ -53,12 +53,12 @@ export function PracticalProjects() {
 
         <div>
           <h3 className="font-semibold text-foreground mb-2">
-            {language === 'en' ? 'SIEM Concepts & Alert Triage (Practice)' : 'Conceptos SIEM y Triaje de Alertas (Práctica)'}
+            {language === 'en' ? 'Technical Incident Management & Alert Triage' : 'Gestión de Incidentes Técnicos y Triaje de Alertas'}
           </h3>
           <p className="text-sm text-foreground leading-relaxed">
             {language === 'en'
-              ? 'Practiced SOC workflows by simulating alerts and security events to understand SIEM concepts such as event ingestion, normalization, and basic correlation. Focused on alert review, prioritization, and escalation following entry-level SOC analyst responsibilities.'
-              : 'Simulación de flujos de trabajo SOC mediante la generación de alertas y eventos de seguridad para comprender conceptos SIEM como ingesta de eventos, normalización y correlación básica. Enfoque en la revisión de alertas, priorización y escalamiento, siguiendo las responsabilidades de un Analista SOC Nivel 1.'}
+              ? 'Simulation of IT Helpdesk and SOC support workflows handling technical alerts and system events. Practiced incident categorization, impact-based prioritization, case documentation, and escalation procedures to ensure SLA compliance.'
+              : 'Simulación de flujos de trabajo de soporte IT / Mesa de Ayuda y SOC mediante la recepción, análisis y resolución de alertas y eventos técnicos. Práctica en categorización de incidencias, priorización según impacto, documentación detallada de casos y protocolos de escalamiento para asegurar el cumplimiento de SLAs.'}
           </p>
         </div>
       </CardContent>

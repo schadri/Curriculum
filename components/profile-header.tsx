@@ -23,13 +23,13 @@ export function ProfileHeader() {
           </h1>
           <h2 className="text-xl text-foreground mb-2">
             {language === 'en' 
-              ? 'SOC Trainee | Cybersecurity Student' 
-              : 'Trainee SOC | Estudiante de Ciberseguridad'}
+              ? 'IT Support | Helpdesk | Jr Infrastructure' 
+              : 'Soporte Técnico IT | Helpdesk | Infraestructura Jr'}
           </h2>
           <p className="text-muted-foreground">
             {language === 'en'
-              ? 'Blue Team • Log Analysis • Networking • SIEM Fundamentals'
-              : 'Blue Team • Análisis de Logs • Redes • Fundamentos SIEM'}
+              ? 'Windows/Linux • Active Directory • Networking (TCP/IP) • Cybersecurity Student'
+              : 'Windows/Linux • Active Directory • Redes (TCP/IP) • Cybersecurity Student'}
           </p>
         </div>
       </div>

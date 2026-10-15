@@ -5,39 +5,46 @@ import { useLanguage } from "@/components/language-provider";
 export function TechnicalSkills() {
   const { language } = useLanguage();
 
-  const socSkills = [
-    "Log Analysis",
-    "Security Monitoring",
-    "Incident Triage",
-    "SIEM Fundamentals",
-    "Network Traffic Analysis",
-    "Basic Threat Detection",
-  ];
+  const helpdeskAndInfrastructure = language === 'en'
+    ? [
+        "Active Directory (GPOs, Permissions)",
+        "Troubleshooting",
+        "Windows Server / 10 / 11",
+        "Linux (Ubuntu, RHEL)",
+        "Ticket Management (SLA)",
+        "VirtualBox / VMware",
+      ]
+    : [
+        "Active Directory (GPOs, Permisos)",
+        "Troubleshooting",
+        "Windows Server / 10 / 11",
+        "Linux (Ubuntu, RHEL)",
+        "Gestión de Tickets (SLA)",
+        "VirtualBox / VMware",
+      ];
 
-  const systemsAndNetworking = [
-    "Linux (RHEL, Ubuntu)",
-    "Windows OS",
-    "TCP/IP",
-    "DNS",
-    "ARP",
-    "Wireshark",
-  ];
+  const networkingAndTools = language === 'en'
+    ? [
+        "TCP/IP",
+        "DNS / DHCP",
+        "Wireshark",
+        "Nmap",
+        "Log Analysis (Event Viewer, Syslog)",
+      ]
+    : [
+        "TCP/IP",
+        "DNS / DHCP",
+        "Wireshark",
+        "Nmap",
+        "Análisis de Logs (Event Viewer, Syslog)",
+      ];
 
-  const securityTools = [
-    "Nmap",
-    "Kali Linux",
-    "Metasploit (basic)",
-    "Burp Suite",
-    "Aircrack-ng",
-  ];
-
-  const devAndOther = [
+  const cybersecurityAndDev = [
+    "SOC Fundamentals",
+    "Incident Detection",
     "Git / GitHub",
-    "VirtualBox / VMware",
-    "Linux Command Line",
-    "JavaScript",
-    "Java",
-    "React.js",
+    "Bash / Python Scripting",
+    "JavaScript / React",
   ];
 
   return (
@@ -51,10 +58,10 @@ export function TechnicalSkills() {
       <CardContent className="space-y-6">
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            {language === 'en' ? 'SOC & Security Fundamentals' : 'SOC y Fundamentos de Seguridad'}
+            {language === 'en' ? 'Helpdesk & Infrastructure' : 'Helpdesk e Infraestructura'}
           </h3>
           <div className="flex flex-wrap gap-2">
-            {socSkills.map((skill) => (
+            {helpdeskAndInfrastructure.map((skill) => (
               <Badge
                 key={skill}
                 variant="secondary"
@@ -68,10 +75,10 @@ export function TechnicalSkills() {
 
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            {language === 'en' ? 'Systems & Networking' : 'Sistemas y Redes'}
+            {language === 'en' ? 'Networking & Tools' : 'Redes y Herramientas'}
           </h3>
           <div className="flex flex-wrap gap-2">
-            {systemsAndNetworking.map((skill) => (
+            {networkingAndTools.map((skill) => (
               <Badge
                 key={skill}
                 variant="secondary"
@@ -85,27 +92,10 @@ export function TechnicalSkills() {
 
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            {language === 'en' ? 'Security Tools (Hands-on)' : 'Herramientas de Seguridad (Práctica)'}
+            {language === 'en' ? 'Cybersecurity & Dev' : 'Ciberseguridad y Desarrollo'}
           </h3>
           <div className="flex flex-wrap gap-2">
-            {securityTools.map((skill) => (
-              <Badge
-                key={skill}
-                variant="secondary"
-                className="bg-muted text-foreground"
-              >
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            {language === 'en' ? 'Development & Other' : 'Desarrollo y Otros'}
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {devAndOther.map((skill) => (
+            {cybersecurityAndDev.map((skill) => (
               <Badge
                 key={skill}
                 variant="secondary"
